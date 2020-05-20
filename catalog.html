@@ -9,7 +9,7 @@
 <body>
   <header>
     <a href="index.html" class="logo">
-      <img src="logo.svg" width="" height="" alt="Логотип дизайн-студии NЁRDS">
+      <img src="img/logo.svg" width="" height="" alt="Логотип дизайн-студии NЁRDS">
     </a>
     <nav class="main-navigation">
       <ul>
@@ -28,6 +28,19 @@
   <main>
     <section class="filter">
       <h2 class="visually-hidden">Фильтр шаблонов</h2>
+
+      <div class="price-scale">
+        <h3> Стоимость:</h3>
+        <div class="price-filter">
+          <button class="range-circle min"></button>
+          <button class="range-circle max"></button>
+        </div>
+        <div class="filter-interval">
+          <span>От</span>
+          <span>До</span>
+        </div>
+      </div>
+
       <h3>Сетка:</h3>
       <ul>
         <li>Адаптивная</li>
@@ -49,10 +62,26 @@
 
     <section class="catalog">
       <h2 class="visually-hidden">Список шаблонов</h2>
+
+      <div class="sort">
+        <span>Сортировать:</span>
+        <ul class="sort-items">
+          <li><a href="#">По цене</a></li>
+          <li><a href="#">По типу</a></li>
+          <li><a href="#">По названию</a></li>
+        </ul>
+        <ul>
+          <li><a href="#"><span class="visually-hidden">Сортировка по убыванию</span>
+            </a></li>
+          <li><a href="#"><span class="visually-hidden">Сортировка по возрастанию</span>
+            </a></li>
+        </ul>
+      </div>
+
       <ul class="catalog-list">
         <li class="catalog-item">
           <div>
-            <img src="sedona.jpg" width="" height="" alt="Изображение красочного сайта с фотографиями Седоны">
+            <img src="img/sedona.jpg" width="" height="" alt="Изображение красочного сайта с фотографиями Седоны">
           </div>
           <div class="actions">
             <a href="">Sedona</a>
@@ -62,7 +91,7 @@
         </li>
         <li class="catalog-item">
           <div>
-            <img src="pink-add.jpg" width="" height="" alt="Изображение стильного лендинга в серо-розовом цвете">
+            <img src="img/pink-add.jpg" width="" height="" alt="Изображение стильного лендинга в серо-розовом цвете">
           </div>
           <div class="actions">
             <a href="">Pink App</a>
@@ -72,8 +101,8 @@
         </li>
         <li class="catalog-item">
           <div>
-            <img src="barbershop.jpg" width="" height=""
-              alt="Изображение сайта мужской парикмахерской, в стилке американского барбершопа в темном цвете">
+            <img src="img/barbershop.jpg" width="" height=""
+              alt="Изображение сайта мужской парикмахерской, в стиле американского барбершопа в темном цвете">
           </div>
           <div class="actions">
             <a href="">Barbershop</a>
@@ -83,8 +112,8 @@
         </li>
         <li class="catalog-item">
           <div>
-            <img src="mishka.jpg" width="" height=""
-              alt="Изображение нежного сайт в пастельных тонах с изображениями вязаных игрушек и аксуссуаров">
+            <img src="img/mishka.jpg" width="" height=""
+              alt="Изображение нежного сайта в пастельных тонах с изображениями вязаных игрушек и аксуссуаров">
           </div>
           <div class="actions">
             <a href="">Mishka</a>
@@ -94,7 +123,7 @@
         </li>
         <li class="catalog-item">
           <div>
-            <img src="a-plus.jpg" width="" height=""
+            <img src="img/a-plus.jpg" width="" height=""
               alt="Изображение яркого сайта с удобно преподносимой информацией о курсах A Plus">
           </div>
           <div class="actions">
@@ -105,7 +134,7 @@
         </li>
         <li class="catalog-item">
           <div>
-            <img src="kvast.jpg" width="" height=""
+            <img src="img/kvast.jpg" width="" height=""
               alt="Изображение сайта с надписью 'Крафтовый квас всему голова!' на фоне золотой пшеницы">
           </div>
           <div class="actions">
@@ -115,6 +144,27 @@
           </div>
         </li>
       </ul>
+
+      <ul class="pagination-list">
+        <li class="pagination-item"><a>1</a></li>
+        <li class="pagination-item "><a href="#">2</a></li>
+        <li class="pagination-item"><a href="#">3</a></li>
+        <li class="pagination-item"><a href="#">Следующая</a></li>
+      </ul>
+    </section>
+
+    <section class="map">
+      <img src="img/map.png" width="" height="" alt="Изображение карты">
+      <div>
+        <h4>Nёrds disign studio</h4>
+        <p>
+          191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+          <a href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
+        </p>
+        <p>
+          <a class="feedback-button" href="">Напишите нам</a>
+        </p>
+      </div>
     </section>
   </main>
 
@@ -128,4 +178,5 @@
     <p>Скидка 10% для друзей из социальных сетей.</p>
   </footer>
 </body>
+
 </html>
