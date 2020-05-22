@@ -29,7 +29,42 @@
 
     <section class="filter">
       <h2 class="visually-hidden">Фильтр шаблонов</h2>
-      <!-- Здесь будет форма -->
+      <form action="https://echo.htmlacademy.ru" method="get">
+
+        <fieldset>
+          <legend>Сетка:</legend>
+          <ul>
+            <li><input type="radio" name="grid" value="adaptive" id="filter-adaptive" checked>
+              <label for="filter-adaptive">Адаптивная</label></li>
+            <li><input type="radio" name="grid" value="fixed" id="filter-fixed">
+              <label for="filter-fixed">Фиксированная</label></li>
+            <li><input type="radio" name="grid" value="rubber" id="filter-rubber">
+              <label for="filter-rubber">Резиновая</label></li>
+          </ul>
+        </fieldset>
+
+        <fieldset>
+          <legend>Особенности:</legend>
+          <ul>
+            <li><input type="checkbox" name="slider" id="filter-slider" checked>
+              <label for="filter-slider">
+                Слайдер</label></li>
+            <li><input type="checkbox" name="advantages" id="filter-advantages">
+              <label for="filter-advantages">
+                Блок преимуществ</label></li>
+            <li><input type="checkbox" name="news" id="filter-news" checked>
+              <label for="filter-news">
+                Новости</label></li>
+            <li><input type="checkbox" name="gallery" id="filter-gallery">
+              <label for="filter-gallery">
+                Галерея</label></li>
+            <li><input type="checkbox" name="basket" id="filter-basket">
+              <label for="filter-basket">
+                Корзина</label></li>
+          </ul>
+        </fieldset>
+        <button type="submit">Показать</button>
+      </form>
     </section>
 
     <section class="catalog">
@@ -137,6 +172,30 @@
           <a class="feedback-button" href="">Напишите нам</a>
         </p>
       </div>
+    </section>
+
+    <section class="pop-up">
+      <h2>Напишите нам</h2>
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <p>
+          <label>Ваше имя:
+            <input type="text" name="name" placeholder="Имя Фамилия">
+          </label>
+        </p>
+        <p>
+          <label>Ваш e-mail:
+            <input type="email" name="email" placeholder="email@example.com">
+          </label>
+        </p>
+        <p>
+          <label for="message">Текст письма:</label>
+        </p>
+        <p>
+          <textarea name="message" id="message" rows="5" cols="80">В свободной форме</textarea>
+        </p>
+        <button type="submit">Отправить</button>
+      </form>
+      <button class="close-popup" type="button"><span class="visually-hidden">Закрыть окно</span></button>
     </section>
   </main>
 
