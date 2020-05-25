@@ -33,6 +33,36 @@
       </h2>
       <form action="https://echo.htmlacademy.ru" method="get">
 
+        <div class="price-scale">
+          <h2>Стоимость:</h2>
+          <div class="price-filter">
+
+              <div class="filter-range">
+                 <div class="range-scale"> <!--серая полоска выбора стоимости -->
+                  <div class="range-scale-selected"></div> <!--зеленая полоска выбора стоимости -->
+                </div>
+                <button class="range-circle min"> <!--левый бегунок -->
+                  <span class="visually-hidden">Стоимость от</span>
+                </button>
+                <button class="range-circle max"> <!--правый бегунок -->
+                  <span class="visually-hidden">Стоимость до</span>
+                </button>
+            </div>
+
+            <div class="filter-interval">
+              <label for="low-prise">
+                От
+               </label>
+              <input id="low-prise" type="text" name="min-price" value="0">
+
+              <label for="high-price">
+                До
+              </label>
+              <input id="high-price" type="text" name="max-price" value="15000">
+            </div>
+          </div>
+        </div>
+
         <fieldset>
           <legend>
             Сетка:
@@ -211,7 +241,8 @@
           </div>
         </li>
       </ul>
-
+      
+      <h3 class="visually-hidden">Переключить страницу</h3>
       <ul class="pagination-list">
         <li class="pagination-item">
           <a>1</a>
@@ -261,8 +292,7 @@
           <label for="message">Текст письма:</label>
         </p>
         <p>
-          <textarea name="message" id="message" rows="5" cols="80">
-            В свободной форме
+          <textarea name="message" id="message" rows="5" cols="80">В свободной форме
           </textarea>
         </p>
         <button type="submit">Отправить</button>
