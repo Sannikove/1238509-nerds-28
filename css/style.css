@@ -1,0 +1,278 @@
+/* Variables */
+
+:root {
+  --basic-black: #000000;
+  --basic-extra-dark-gray: #283136;
+  --basic-dark-gray: #4d4d4d;
+  --basic-medium-gray: #666666;
+  --basic-gray: #e1e1e1;
+  --basic-light-gray: #eeeeee;
+  --basic-white: #ffffff;
+
+  --form-dark-gray: #444444;
+  --form-gray: #b4b9bb;
+  --form-light-gray: #d7dcde;
+
+  --btn-dark-gray: #d5d5d5;
+  --btn-gray: #dfdfdf;
+
+
+  --basic-dark-red: #d7373b;
+  --basic-medium-red: #e74346;
+  --basic-red: #fb565a;
+
+  --basic-dark-green: #00aa62;
+  --basic-medium-green: #00bc6c;
+  --basic-green: #00ca74;
+
+  --basic-dark-yellow: #e5a722;
+  --basic-medium-yellow: #eab534;
+  --basic-yellow: #efc849;
+
+  --special-white: rgba(255, 255, 255, 0.3);
+  --special-gray: rgba(0, 0, 0, 0.25);
+}
+
+/* Global */
+
+body {
+  min-width: 1160px;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: normal;
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* styles for header */
+
+.header {
+  min-height: 120px;
+  background-color: var(--basic-light-gray);
+}
+
+.header .logo:focus {
+  opacity: 0.3;
+}
+
+.main-navigation ul {
+  list-style: none;
+}
+
+.main-navigation a,
+.basket {
+  color: var(--basic-black);
+  font-weight: 500;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.main-navigation a:hover,
+.basket:hover {
+  color: var(--basic-red);
+}
+
+.main-navigation a:focus,
+.basket:focus {
+  color: var(--basic-black);
+  opacity: 0.3;
+}
+
+.active {
+  border-bottom: 2px solid var(--basic-red);
+}
+
+/* styles for index.html */
+
+.products h3 {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.products p {
+  color: var(--basic-extra-dark-gray);
+}
+
+.products a {
+  line-height: 18px;
+  color: var(--basic-white);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.first-product a {
+  background-color: var(--basic-red);
+}
+
+.first-product a:hover {
+  background-color: var(--basic-medium-red);
+}
+
+.first-product a:focus {
+  background-color: var(--basic-dark-red);
+  color: var(--special-white);
+}
+
+.second-product a {
+  background-color: var(--basic-green);
+}
+
+.second-product a:hover {
+  background-color: var(--basic-medium-green);
+}
+
+.second-product a:focus {
+  background-color: var(--basic-dark-green);
+  color: var(--special-white);
+}
+
+.third-product a {
+  background-color: var(--basic-yellow);
+}
+
+.third-product a:hover {
+  background-color: var(--basic-medium-yellow);
+}
+
+.third-product a:focus {
+  background-color: var(--basic-dark-yellow);
+  color: var(--special-white);
+}
+
+.pop-up {
+  display: none;
+}
+
+/* styles for catalog.html */
+
+.title {
+  font-weight: 500;
+  font-size: 55px;
+  line-height: 55px;
+  text-align: center;
+  background-color: var(--basic-light-gray);
+}
+
+.filter legend {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.filter ul {
+  list-style: none;
+}
+
+.filter-input+label {
+  color: var(--basic-extra-dark-gray);
+  line-height: 20px;
+}
+
+.filter-input:disabled+label {
+  opacity: 0.3;
+}
+
+.catalog-list {
+  list-style: none;
+}
+
+.catalog-item .actions {
+  background-color: var(--basic-light-gray);
+  text-align: center;
+}
+
+.catalog-item:hover {
+  box-shadow: 0px 4px 4px var(--special-gray);
+}
+
+.actions a:first-child {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--basic-black);
+}
+
+.actions a:first-child:hover {
+  color: var(--basic-red);
+}
+
+.actions a:first-child:focus {
+  color: var(--basic-black);
+  opacity: 0.3;
+}
+
+.actions p {
+  color: var(--basic-medium-gray);
+  line-height: 18px;
+}
+
+.actions .buy {
+  color: var(--basic-white);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  background-color: var(--basic-red);
+}
+
+.actions .buy:hover {
+  background-color: var(--basic-medium-red);
+}
+
+.actions .buy:focus {
+  background-color: var(--basic-dark-red);
+}
+
+/* styles for footer */
+
+.footer {
+  background-color: var(--basic-white);
+}
+
+.socials {
+  list-style: none;
+}
+
+.social-button {
+  color: var(--basic-black);
+  background-color: var(--basic-gray);
+}
+
+.social-button:hover {
+  background-color: var(--basic-medium-red);
+}
+
+.social-button:focus {
+  background-color: var(--basic-dark-red);
+}
+
+.social-button:focus svg {
+  opacity: 0.3;
+}
+
+.footer h2 {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.footer p {
+  color: var(--form-dark-gray);
+  line-height: 22px;
+}
