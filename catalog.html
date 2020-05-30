@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 
 <head>
   <meta charset="utf-8">
@@ -9,27 +9,29 @@
   <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="page-body">
   <header class="header">
-    <a href="index.html" class="logo">
-      <img src="img/logo.svg" width="160" height="65" alt="Логотип дизайн-студии NЁRDS">
-    </a>
-    <nav class="main-navigation">
-      <ul>
-        <li><a href="index.html">Студия</a></li>
-        <li><a href="">Клиенты</a></li>
-        <li><a class="active">Магазин</a></li>
-        <li><a href="">Контакты</a></li>
-      </ul>
-    </nav>
-    <div class="main-navigation">
-      <a href="#">Корзина</a>
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="img/logo.svg" width="160" height="65" alt="Логотип дизайн-студии NЁRDS">
+      </a>
+      <nav class="main-navigation">
+        <ul>
+          <li><a href="index.html">Студия</a></li>
+          <li><a href="">Клиенты</a></li>
+          <li><a class="active">Магазин</a></li>
+          <li><a href="">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="main-navigation basket">
+        <a href="#">Корзина</a>
+      </div>
     </div>
   </header>
 
-  <main>
+  <main class="inner-main">
     <h1 class="title">Магазин готовых шаблонов</h1>
-
+    <div class="container">
     <section class="filter">
       <h2 class="visually-hidden">
         Фильтр шаблонов
@@ -55,7 +57,7 @@
             <div class="filter-interval">
               <label for="low-prise">
                 От
-               </label>
+              </label>
               <input id="low-prise" type="text" name="min-price" value="0">
 
               <label for="high-price">
@@ -73,24 +75,21 @@
           <ul>
             <li>
               <input class="visually-hidden filter-input
-               filter-input-radio" type="radio" name="grid"
-                value="adaptive" id="filter-adaptive" checked>
+               filter-input-radio" type="radio" name="grid" value="adaptive" id="filter-adaptive" checked>
               <label for="filter-adaptive">
                 Адаптивная
               </label>
             </li>
             <li>
               <input class="visually-hidden filter-input
-               filter-input-radio" type="radio" name="grid"
-                value="fixed" id="filter-fixed">
+               filter-input-radio" type="radio" name="grid" value="fixed" id="filter-fixed">
               <label for="filter-fixed">
                 Фиксированная
               </label>
             </li>
             <li>
               <input class="visually-hidden filter-input
-               filter-input-radio" type="radio" name="grid"
-                value="rubber" id="filter-rubber">
+               filter-input-radio" type="radio" name="grid" value="rubber" id="filter-rubber">
               <label for="filter-rubber">
                 Резиновая
               </label>
@@ -105,36 +104,35 @@
           <ul>
             <li>
               <input class="visually-hidden filter-input
-               filter-input-checkbox" type="checkbox"
-               name="slider" id="filter-slider" checked>
+               filter-input-checkbox" type="checkbox" name="slider" id="filter-slider" checked>
               <label for="filter-slider">
                 Слайдер
               </label>
             </li>
             <li>
               <input class="visually-hidden filter-input
-               filter-input-checkbox" type="checkbox"
-                name="advantages" id="filter-advantages">
+               filter-input-checkbox" type="checkbox" name="advantages" id="filter-advantages">
               <label for="filter-advantages">
                 Блок преимуществ
               </label>
             </li>
             <li>
               <input class="visually-hidden filter-input
-               filter-input-checkbox" type="checkbox"
-                name="news" id="filter-news" checked>
+               filter-input-checkbox" type="checkbox" name="news" id="filter-news" checked>
               <label for="filter-news">
                 Новости
               </label>
             </li>
             <li>
-              <input type="checkbox" name="gallery" id="filter-gallery">
+              <input class="visually-hidden filter-input
+              filter-input-checkbox" type="checkbox" name="gallery" id="filter-gallery">
               <label for="filter-gallery">
                 Галерея
               </label>
             </li>
             <li>
-              <input type="checkbox" name="basket" id="filter-basket">
+              <input class="visually-hidden filter-input
+              filter-input-checkbox" type="checkbox" name="basket" id="filter-basket">
               <label for="filter-basket">
                 Корзина
               </label>
@@ -165,9 +163,8 @@
               <span class="visually-hidden">
                 Сортировка по убыванию
               </span>
-              <svg xmlns="http://www.w3.org/2000/svg" 
-                width="11" height="10" viewbox="0 0 11 10">
-                <path fill="#A6A6A6" d="M5.5 10L0 0h11"/>
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewbox="0 0 11 10">
+                <path fill="#A6A6A6" d="M5.5 10L0 0h11" />
               </svg>
 
             </a>
@@ -188,7 +185,7 @@
 
       <ul class="catalog-list">
         <li class="catalog-item">
-          <div>
+          <div class="catalog-item-image">
             <img src="img/sedona.jpg" width="358" height="576" alt="Изображение красочного сайта с фотографиями Седоны">
           </div>
           <div class="actions">
@@ -200,7 +197,7 @@
           </div>
         </li>
         <li class="catalog-item">
-          <div>
+          <div class="catalog-item-image">
             <img src="img/pink-app.jpg" width="358" height="576"
               alt="Изображение стильного лендинга в серо-розовом цвете">
           </div>
@@ -213,7 +210,7 @@
           </div>
         </li>
         <li class="catalog-item">
-          <div>
+          <div class="catalog-item-image">
             <img src="img/barbershop.jpg" width="358" height="576"
               alt="Изображение сайта мужской парикмахерской, в стиле американского барбершопа в темном цвете">
           </div>
@@ -226,7 +223,7 @@
           </div>
         </li>
         <li class="catalog-item">
-          <div>
+          <div class="catalog-item-image">
             <img src="img/mishka.jpg" width="358" height="576"
               alt="Изображение нежного сайта в пастельных тонах с изображениями вязаных игрушек и аксуссуаров">
           </div>
@@ -239,7 +236,7 @@
           </div>
         </li>
         <li class="catalog-item">
-          <div>
+          <div class="catalog-item-image">
             <img src="img/a-plus.jpg" width="358" height="576"
               alt="Изображение яркого сайта с удобно преподносимой информацией о курсах A Plus">
           </div>
@@ -252,7 +249,7 @@
           </div>
         </li>
         <li class="catalog-item">
-          <div>
+          <div class="catalog-item-image">
             <img src="img/kvast.jpg" width="358" height="576"
               alt="Изображение сайта с надписью 'Крафтовый квас всему голова!' на фоне золотой пшеницы">
           </div>
@@ -265,7 +262,7 @@
           </div>
         </li>
       </ul>
-      
+
       <h3 class="visually-hidden">Переключить страницу</h3>
       <ul class="pagination-list">
         <li class="pagination-item">
@@ -282,7 +279,7 @@
         </li>
       </ul>
     </section>
-
+</div>
     <section class="map">
       <img src="img/map.png" width="1430" height="416" alt="Изображение карты">
       <div>
@@ -327,14 +324,13 @@
     </section>
   </main>
 
-  <footer class="footer">
+  <footer class="footer container">
     <ul class="socials">
       <li>
         <a class="social-button" href="#">
           <span class="visually-hidden">Вконтакте</span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="26" 
-            height="15" viewbox="0 0 26 15">
-              <path fill="#FFF" d="M16.138 11.51c.956-.309 2.18
+          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="15" viewbox="0 0 26 15">
+            <path fill="#FFF" d="M16.138 11.51c.956-.309 2.18
               2.04 3.483 2.939.978.681 1.727.534
               1.727.534l3.473-.05s1.815-.112.957-1.554c-.071-.12-.503-1.069-2.585-3.022-2.177-2.043-1.882-1.712.739-5.244
               1.597-2.153 2.236-3.468
@@ -366,8 +362,10 @@
         </a>
       </li>
     </ul>
-    <h2>Давайте дружить, это выгодно!</h2>
-    <p>Скидка 10% для друзей из социальных сетей.</p>
+    <div class="footer-wrap">
+      <h2>Давайте дружить, это выгодно!</h2>
+      <p>Скидка 10% для друзей из социальных сетей.</p>
+    </div>
   </footer>
 
 </body>
