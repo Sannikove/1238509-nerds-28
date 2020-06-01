@@ -710,6 +710,7 @@ img {
 
 .footer {
   background-color: var(--basic-white);
+  padding-top: 68px;
 }
 
 .socials {
@@ -778,9 +779,4 @@ input[type="radio"].visually-hidden {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
-
-.second-slide,
-.third-slide {
-  display: none;
 }
