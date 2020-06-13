@@ -13,6 +13,7 @@ var close = document.querySelector('.close-popup');
 var login = popup.querySelector("[name=name]");
 var form = popup.querySelector("form");
 var mail = popup.querySelector("[name=email]");
+var textarea = popup.querySelector("[name=message]");
 
 if (firstSlide) {
   btnFirst.addEventListener("click", function (evt) {
@@ -89,7 +90,7 @@ close.addEventListener('click', function (evt) {
 })
 
 form.addEventListener("submit", function (evt) {
-  if (!login.value || !mail.value) {
+  if (!login.value || !mail.value || !textarea.value) {
     evt.preventDefault();
     popup.classList.remove("error");
     popup.offsetWidth = popup.offsetWidth;
