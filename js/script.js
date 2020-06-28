@@ -1,10 +1,5 @@
-var btnFirst = document.querySelector('.indicator-button:first-child');
-var btnSecond = document.querySelector('.indicator-button:nth-child(2)');
-var btnThird = document.querySelector('.indicator-button:nth-child(3)');
-
-var firstSlide = document.querySelector('.first-slide');
-var secondSlide = document.querySelector('.second-slide');
-var thirdSlide = document.querySelector('.third-slide');
+var sliderButtons = document.querySelectorAll('.indicator-button');
+var slides = document.querySelectorAll('.slide');
 
 var popupBtn = document.querySelector('.feedback-button');
 var popup = document.querySelector('.pop-up');
@@ -15,45 +10,21 @@ var form = popup.querySelector("form");
 var mail = popup.querySelector("[name=email]");
 var textarea = popup.querySelector("[name=message]");
 
-if (firstSlide) {
-  btnFirst.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    firstSlide.classList.add("current-slide");
-    secondSlide.classList.remove("current-slide");
-    thirdSlide.classList.remove("current-slide");
-
-    btnFirst.classList.add("current-btn");
-    btnSecond.classList.remove("current-btn");
-    btnThird.classList.remove("current-btn");
-  })
+if(slides){
+  for(let i = 0; i < sliderButtons.length; i++) {
+    sliderButtons[i].addEventListener('click', function(evt){
+      slides[i].classList.add('current-slide');
+      sliderButtons[i].classList.add('current-btn');
+      for (let j = 0; j < slides.length; j++) {
+        if (j !== i) {
+          slides[j].classList.remove('current-slide');
+          sliderButtons[j].classList.remove('current-btn');
+        }
+      }
+    })  
+  }
+  
 }
-
-if (secondSlide) {
-  btnSecond.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    secondSlide.classList.add("current-slide");
-    firstSlide.classList.remove("current-slide");
-    thirdSlide.classList.remove("current-slide");
-
-    btnFirst.classList.remove("current-btn");
-    btnSecond.classList.add("current-btn");
-    btnThird.classList.remove("current-btn");
-  })
-}
-
-if (thirdSlide) {
-  btnThird.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    thirdSlide.classList.add("current-slide");
-    firstSlide.classList.remove("current-slide");
-    secondSlide.classList.remove("current-slide");
-
-    btnFirst.classList.remove("current-btn");
-    btnSecond.classList.remove("current-btn");
-    btnThird.classList.add("current-btn");
-  })
-}
-
 
 //   popup
 

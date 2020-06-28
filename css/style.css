@@ -973,23 +973,26 @@ img {
   bottom: 0px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-  display: none;
+  opacity: 0;
 }
 
 .catalog-item:hover .actions,
-.catalog-item:focus .actions {
-  display: block;
+.catalog-item:focus .actions{
+  opacity: 1;
 }
 
-.catalog-item:hover {
+.catalog-item:hover,
+.catalog-item:focus{
   box-shadow: 0px 4px 4px var(--special-gray);
 }
 
-.catalog-item:hover img {
+.catalog-item:hover img,
+.catalog-item:focus img {
   border: none;
 }
 
-.catalog-item:hover::before {
+.catalog-item:hover::before,
+.catalog-item:focus::before {
   opacity: 1;
 }
 
