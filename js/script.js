@@ -5,10 +5,13 @@ var popupBtn = document.querySelector('.feedback-button');
 var popup = document.querySelector('.pop-up');
 var close = document.querySelector('.close-popup');
 
-var login = popup.querySelector("[name=name]");
-var form = popup.querySelector("form");
-var mail = popup.querySelector("[name=email]");
-var textarea = popup.querySelector("[name=message]");
+var login = popup.querySelector('[name=name]');
+var form = popup.querySelector('form');
+var mail = popup.querySelector('[name=email]');
+var textarea = popup.querySelector('[name=message]');
+
+var isStorageSupport = true;
+var storage = '';
 
 if(slides){
   for(let i = 0; i < sliderButtons.length; i++) {
@@ -29,7 +32,7 @@ if(slides){
 //   popup
 
 try {
-  storage = localStorage.getItem("login");
+  storage = localStorage.getItem('login');
 } catch (err) {
   isStorageSupport = false;
 }
@@ -43,9 +46,6 @@ popupBtn.addEventListener('click', function (evt) {
     mail.focus();
   } else {
     login.focus();
-    if (storage) {
-      login.value = storage;
-    }
   }
 })
 
@@ -55,33 +55,33 @@ close.addEventListener('click', function (evt) {
   popup.classList.remove('error');
 
   setTimeout(function () {
-    popup.classList.remove("show-pop-up");
-  }, 600);
+    popup.classList.remove('show-pop-up');
+  }, 500);
 
 })
 
-form.addEventListener("submit", function (evt) {
+form.addEventListener('submit', function (evt) {
   if (!login.value || !mail.value || !textarea.value) {
     evt.preventDefault();
-    popup.classList.remove("error");
+    popup.classList.remove('error');
     popup.offsetWidth = popup.offsetWidth;
-    popup.classList.add("error");
+    popup.classList.add('error');
   } else {
     if (isStorageSupport) {
-      localStorage.setItem("login", login.value);
+      localStorage.setItem('login', login.value);
     }
   }
 })
 
-window.addEventListener("keydown", function (evt) {
+window.addEventListener('keydown', function (evt) {
   if (evt.keyCode === 27) {
     evt.preventDefault();
-    if (popup.classList.contains("show-pop-up")) {
-      popup.classList.add("hide");
-      popup.classList.remove("error");
+    if (popup.classList.contains('show-pop-up')) {
+      popup.classList.add('hide');
+      popup.classList.remove('error');
       setTimeout(function () {
-        popup.classList.remove("show-pop-up");
-      }, 600);
+        popup.classList.remove('show-pop-up');
+      }, 500);
     }
   }
 });
